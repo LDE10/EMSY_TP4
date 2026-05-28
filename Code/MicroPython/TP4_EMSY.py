@@ -1,0 +1,138 @@
+from machine import Pin
+import time
+import neopixel # Pour led RGB
+import network  # Pour envoyer gestion wifi
+import espnow   # Pour recevoir protocole
+
+# Activation du wifi
+sta = network.WLAN(network.WLAN.IF_STA)
+sta.active(True)
+
+# Activation reception
+e = espnow.ESPNow()
+e.active(True)
+
+peer = b'\xbb\xbb\xbb\xbb\xbb\xbb' # Adresse 
+e.add_peer(peer)
+
+led1 = Pin(6, Pin.OUT)
+bouton1 = Pin(4, Pin.IN, Pin.PULL_DOWN)
+bouton2 = Pin(5, Pin.IN, Pin.PULL_DOWN)
+
+Lrgb = Pin(48, Pin.OUT)
+Np = neopixel.NeoPixel(Lrgb, 1)
+
+led1.value(1)
+
+Btn1Old = 0
+Btn1New = 0
+Btn2Old = 0
+Btn2New = 0
+
+# LED RGB
+Led = [(5, 0, 0), (0, 5, 0), (0, 0, 5)]
+index = 0
+
+# Variables d'état pour les modes
+remote_mode = False
+led_allumee = True
+
+# --- LES CHRONOMÈTRES ---
+chrono_envoi = time.ticks_ms()       
+chrono_clignote = time.ticks_ms()    
+dernier_contact = time.ticks_ms()    
+
+
+Np[0] = Led[index]
+Np.write()
+
+while True :
+    maintenant = time.ticks_ms()
+    
+    Btn1Old = Btn1New
+    Btn1New = bouton1.value()
+    
+    Btn2Old = Btn2New
+    Btn2New = bouton2.value()
+    
+
+# 1. ENVOI AUTOMATIQUE TOUTES LES 2 SECONDES
+    if time.ticks_diff(maintenant, chrono_envoi) >= 2000: # Toutes les 2 s 
+        try:
+            e.send(peer, b'ping') # Envoie un "ping" 
+        except OSError:
+            # Passe en mode local
+            pass
+        chrono_envoi = maintenant
+
+
+# 2. RÉCEPTION DES MESSAGES
+
+    host, msg = e.recv(0) 
+
+    # Si reçoit 'ping', répond 'pong' sur l'autre carte
+    if msg == b'ping':
+        try:
+            e.send(peer, b'pong')
+        except OSError:
+                pass
+            
+    # Valide le mode Remote
+    if msg == b'pong':
+        dernier_contact = maintenant # Temps depuis le dernier signe de vie
+        if not remote_mode:
+            print("Mode remote.")
+            remote_mode = True
+            
+    if msg == b'change_led':
+        index = (index + 1) % 3
+        # Si on n'est pas en mode remote, applique la couleur
+        if not remote_mode: 
+            Np[0] = Led[index]
+            Np.write()
+
+
+# 3. VÉRIFICATION DU TIMEOUT (Perte de connexion)
+    # Si pas de communication depuis plus 4 secondes -> Mode Local
+    if time.ticks_diff(maintenant, dernier_contact) > 4000:
+        if remote_mode: 
+            print("Mode Local.")
+            remote_mode = False
+            
+            Np[0] = Led[index] 
+            Np.write()        
+
+# 4. GESTION DU BOUTON S2
+    if Btn2New == 1 and Btn2Old == 0: 
+        if remote_mode:
+            # MODE REMOTE
+            try:
+                e.send(peer, b'change_led')
+                print("Changement de couleur")
+            except OSError:
+                print("Échec")
+        else:
+            # MODE LOCAL
+            index = (index + 1) % 3
+            Np[0] = Led[index]
+            Np.write()
+            print("Changement de couleur")
+
+# 5. CLIGNOTEMENT À 2 Hz
+    if remote_mode:
+        if time.ticks_diff(maintenant, chrono_clignote) >= 250: # Toutes les 250 ms (Clignotement 2 Hz)
+            led_allumee = not led_allumee
+            if led_allumee:
+                Np[0] = Led[index] 
+            else:
+                Np[0] = (0, 0, 0) 
+            Np.write()
+            chrono_clignote = maintenant
+
+# 6. GESTION DU BOUTON 1 & TIMING GENERAL
+    if Btn1New == 0 and Btn1Old == 1:
+        led1.value(0)
+    elif Btn1New == 1 and Btn1Old == 0 :
+        led1.value(1)
+            
+    time.sleep_ms(20) # Anti-rebond 
