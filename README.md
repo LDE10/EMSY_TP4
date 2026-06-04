@@ -42,7 +42,7 @@ Unispace12x24 : https://github.com/rdagger/micropython-ili9341/blob/master/fonts
 
 ### Langages & Frameworks
 
-Code C :https://github.com/LDE10/EMSY_TP4/tree/main/Code/C
+Code C : https://github.com/LDE10/EMSY_TP4/tree/main/Code/C
 
 Code MicroPython : https://github.com/LDE10/EMSY_TP4/tree/main/Code/MicroPython
 
