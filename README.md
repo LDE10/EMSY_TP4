@@ -42,6 +42,8 @@ Unispace12x24 : https://github.com/rdagger/micropython-ili9341/blob/master/fonts
 
 ### Langages & Frameworks
 
+code c :https://github.com/LDE10/EMSY_TP4/tree/main/Code/C
+
 [Liste de tout ce qui permet la confection du projet avec description + lien vers la documentation]
 
 ### Outils
