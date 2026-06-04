@@ -23,9 +23,12 @@ LIBRAIRIE : ili.py, xglcd_font.py et Unispace12x24.c
 ## Installation
 
 LIBRAIRIE : 
-xglcd_font : https://github.com/rdagger/micropython-ili9341/blob/master/xglcd_font.py
 
 ili : https://github.com/rdagger/micropython-ili9341/blob/master/ili9341.py
+
+xglcd_font : https://github.com/rdagger/micropython-ili9341/blob/master/xglcd_font.py
+
+Unispace12x24 : https://github.com/rdagger/micropython-ili9341/blob/master/fonts/Unispace12x24.c
 
 ## Utilisation
 
