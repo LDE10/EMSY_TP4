@@ -53,4 +53,4 @@ LIBRAIRIE : ili.py, xglcd_font.py et Unispace12x24.c
 [Lien vers documentations externes ou documentation embarquée ici avec table des matières]
 
 
-Voir le fichier [LICENSE](./LICENSE.md) du dépôt.
+
