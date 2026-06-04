@@ -19,6 +19,7 @@ Utiliser deux ESP32-S3 en déployant un firmware identique en C et en MicroPytho
 ## Prérequis
 
 DOCUMENTS : EMSY02 TP4-Decouverte ESP32 v1_0 et 24210_KitDevESP32Gui_Schematic_Variant_[No Variations]
+
 LIBRAIRIE : ili.py, xglcd_font.py et Unispace12x24.c
 
 ## Installation
