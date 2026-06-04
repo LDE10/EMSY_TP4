@@ -13,8 +13,6 @@ Utiliser deux ESP32-S3 en déployant un firmware identique en C et en MicroPytho
 - 🤝 [Contribution](#contribution)
 - 🏗️ [Construit avec](#construit-avec)
 - 📚 [Documentation](#documentation)
-- 🏷️ [Gestion des versions](#gestion-des-versions)
-- 📝 [Licence](#licence)
 
 ## Prérequis
 
@@ -54,12 +52,5 @@ LIBRAIRIE : ili.py, xglcd_font.py et Unispace12x24.c
 
 [Lien vers documentations externes ou documentation embarquée ici avec table des matières]
 
-## Gestion des versions
-
-Afin de maintenir un cycle de publication claire et de favoriser la rétrocompatibilité, la dénomination des versions suit la spécification décrite par la [Gestion sémantique de version](https://semver.org/lang/fr/)
-
-Les versions disponibles ainsi que les journaux décrivant les changements apportés sont disponibles depuis [la page des Releases][mettre le lien ici].
-
-## Licence
 
 Voir le fichier [LICENSE](./LICENSE.md) du dépôt.
