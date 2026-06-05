@@ -36,16 +36,16 @@ Unispace12x24 : Fichier de police de caractères pour l'affichage de texte, http
 
 Code C :
 
-   * Bouton S1 (GPIO 4) : Contrôle l'état de la LED standard D1 (GPIO 6). Une détection de front descendant couplée à un anti-rebond temporel de 50 ms permet d'inverser proprement l'état de la LED (allumée/éteinte) à chaque impulsion.
-* Bouton S2 (GPIO 5) : Gère le cycle de couleur de la LED RGB NeoPixel interne (GPIO 48). À chaque appui validé, une machine à états (énumération `RGB_COLORS`) incrémente la couleur selon le cycle classique : Rouge → Vert → Bleu → Rouge.
-* Périphérique RMT : L'affichage de la couleur sur la LED RGB utilise le périphérique matériel de modulation à distance (RMT) configuré à une fréquence de 10 MHz pour garantir des signaux de commande précis.
+   * Bouton S1 (GPIO 4) : Contrôle l'état de la led D1 (GPIO 6), une détection de flanc descendant couplée à un anti-rebond temporel de 50 ms permet d'inverser l'état de la LED à chaque impulsion.
+   * Bouton S2 (GPIO 5) : Gère le cycle de couleur de la LED RGB NeoPixel (GPIO 48), à chaque appui validé une machine à états (RGB_COLORS) incrémente la couleur selon le cycle (Rouge → Vert → Bleu)
+   * Périphérique RMT : L'affichage de la couleur sur la LED RGB utilise le périphérique matériel de modulation à distance (RMT) configuré à une fréquence de 10 MHz pour garantir des signaux de commande précis.
 
 Code MicroPython :
 
 Le système bascule automatiquement entre deux modes toutes les 2 secondes :
 
 1. Mode Local :
-   * Bouton S1 (Pin 4) : Alterne l'état de la led D1 à chaque appui (détection de flanc + anti-rebond).
+   * Bouton S1 (Pin 4) : Alterne l'état de la led D1 (Pin 6) à chaque appui (détection de flanc + anti-rebond).
    * Bouton S2 (Pin 5) : Modifie la couleur de la led RGB (Rouge → Vert → Bleu).
    * Écran LCD : Affiche en temps réel la couleur de la led RGB.
 
