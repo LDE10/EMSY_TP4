@@ -22,6 +22,10 @@ LIBRAIRIE : ili.py, xglcd_font.py et Unispace12x24.c
 
 ## Installation
 
+APPLICATION :
+
+Utilisation Thony : 
+
 LIBRAIRIE : 
 
 ili : https://github.com/rdagger/micropython-ili9341/blob/master/ili9341.py
