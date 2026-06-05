@@ -40,16 +40,16 @@ Code MicroPython :
 
 Le système bascule automatiquement entre deux modes toutes les 2 secondes :
 
-1. **Mode Local (Par défaut / Perte de connexion) :**
-   * **Bouton S1 :** Alterne l'état de la led standard D1 (Pin 6) à chaque appui (détection de flanc avec anti-rebond).
-   * **Bouton S2 :** Modifie la couleur de la led RGB (Rouge → Vert → Bleu).
-   * **Écran LCD :** Affiche en temps réel la couleur de la led RGB.
+1. Mode Local :
+   * Bouton S1 : Alterne l'état de la led standard D1 (Pin 6) à chaque appui (détection de flanc avec anti-rebond).
+   * Bouton S2 : Modifie la couleur de la led RGB (Rouge → Vert → Bleu).
+   * Écran LCD : Affiche en temps réel la couleur de la led RGB.
 
-2. **Mode Remote (Connexion établie avec le second ESP32) :**
+2. Mode Remote :
    * Activé dès qu'un message `b'pong'` est reçu en réponse à un `b'ping'`. Si aucun signal n'est reçu pendant plus de 4 secondes, le système repasse en Mode Local.
-   * **Bouton S2 :** L'appui sur le bouton agit sur l'autre carte ESP32 pour modifier la couleur de la led RGB.
-   * **LED RGB :** En mode connecté, la LED RGB se met à **clignoter à une fréquence de 2 Hz** (250 ms).
-   * **Écran LCD :** Affiche en temps réel la couleur de la led RG
+   * Bouton S2 : L'appui sur le bouton agit sur l'autre carte ESP32 pour modifier la couleur de la led RGB.
+   * LED RGB : En mode connecté, la LED RGB se met à clignoter à une fréquence de 2 Hz (250 ms).
+   * Écran LCD : Affiche en temps réel la couleur de la led RG
 
 
 ## Contribution
