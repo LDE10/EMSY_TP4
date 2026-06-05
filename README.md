@@ -63,7 +63,7 @@ Le système bascule automatiquement entre deux modes toutes les 2 secondes :
 Code C : https://github.com/LDE10/EMSY_TP4/tree/main/Code/C
 
 Réalisez un programme qui change l’état de la LED D1 à chaque appui sur le bouton S1 avec une détection de flanc et antirebon, de plus les appuis sur S2 changent la couleur de la LED RGB du module (R->G->B)
-ESP32-S3-DevKitC-1 (R → G → B → R → etc.). 
+ESP32-S3-DevKitC (R → G → B → R → etc.). 
 
 Code MicroPython : https://github.com/LDE10/EMSY_TP4/tree/main/Code/MicroPython
 
