@@ -24,9 +24,10 @@ LIBRAIRIE : ili.py, xglcd_font.py et Unispace12x24.c
 
 APPLICATION :
 
-Utilisation Thony : 
+Utilisation Thony : https://github.com/LDE10/EMSY_TP4/blob/main/EMSY02%20TP4-Decouverte%20ESP32%20v1_0.pdf
 
 <img width="709" height="226" alt="image" src="https://github.com/user-attachments/assets/f35bbe60-e3f0-47ee-948a-255204bc4098" />
+page 3
 
 
 LIBRAIRIE : 
