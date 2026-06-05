@@ -80,7 +80,4 @@ Utilisation en C :https://github.com/LDE10/EMSY_TP4/blob/main/EMSY02%20TP4-Decou
 <img width="531" height="130" alt="image" src="https://github.com/user-attachments/assets/8ed3fea9-cdc8-4072-9c79-2b1a38923f51" />
 page 3
 
-[Lien vers documentations externes ou documentation embarquée ici avec table des matières]
-
-
 
