@@ -2,7 +2,7 @@
 
 ## OBJECTIF
 
-Utiliser deux ESP32-S3 en déployant un firmware identique en C et en MicroPython pour contrôler des périphériques physiques (boutons, LED standard et RGB) et établir une communication sans fil point à point entre deux cartes.
+Utiliser deux ESP32-S3 en déployant un firmware identique en C et en MicroPython pour contrôler des périphériques physiques boutons, LED standard et RGB (codé en MicroPython et en C) et établir une communication sans fil point à point entre deux cartes ESP32-S3 (codé seulement en MicroPython).
 
 ## Table des matières
 
@@ -34,6 +34,21 @@ Unispace12x24 : Fichier de police de caractères pour l'affichage de texte, http
 
 ## Utilisation
 
+Code C :
+
+Code MicroPython :
+
+Le système bascule automatiquement entre deux modes toutes les 2 secondes :
+
+1. **Mode Local (Par défaut / Perte de connexion) :**
+   * **Bouton S1 (Pin 4) :** Alterne l'état de la LED standard D1 (Pin 6) à chaque appui (détection de flanc avec anti-rebond).
+   * **Bouton S2 (Pin 5) :** Modifie cycliquement la couleur de la LED RGB NeoPixel locale (Rouge → Vert → Bleu).
+   * **Écran LCD :** Affiche en temps réel la couleur active configurée.
+
+2. **Mode Remote (Connexion établie avec le second ESP32) :**
+   * Activé dès qu'un message `b'pong'` est reçu en réponse à un `b'ping'`. Si aucun signal n'est reçu pendant plus de 4 secondes, le système repasse en Mode Local.
+   * **Bouton S2 (Pin 5) :** L'appui sur le bouton n'agit plus localement, mais envoie l'ordre `b'change_led'` à l'autre carte ESP32 pour modifier sa couleur.
+   * **LED RGB :** En mode connecté, la LED RGB se met à **clignoter à une fréquence de 2 Hz** (toutes les 250 ms) avec la couleur sélectionnée.
 
 
 ## Contribution
