@@ -11,7 +11,6 @@ Utiliser deux ESP32-S3 en déployant un firmware identique en C et en MicroPytho
 - 🚀 [Installation](#installation)
 - 🛠️ [Utilisation](#utilisation)
 - 🤝 [Contribution](#contribution)
-- 🏗️ [Construit avec](#construit-avec)
 - 📚 [Documentation](#documentation)
 
 ## Prérequis
@@ -56,28 +55,11 @@ Le système bascule automatiquement entre deux modes toutes les 2 secondes :
    * LED RGB : En mode connecté, la LED RGB se met à clignoter à une fréquence de 2 Hz (250 ms).
    * Écran LCD : Affiche en temps réel la couleur de la led RG
 
-
-## Contribution
-
-[### Sous-titre + description avec exemple des commandes à lancer pour l'ensemble du flux de contribution sur le dépôt]
-
-## Construit avec
-
 ### Langages & Frameworks
 
 Code C : https://github.com/LDE10/EMSY_TP4/tree/main/Code/C
 
 Code MicroPython : https://github.com/LDE10/EMSY_TP4/tree/main/Code/MicroPython
-
-### Outils
-
-#### CI
-
-[Liste de tout ce qui permet l'intégration automatisée du projet avec description + lien vers la documentation et mise en avant des comptes, organisations et variables]
-
-#### Déploiement
-
-[Liste de tout ce qui permet le déploiement du projet avec description + lien vers la documentation et mise en avant des comptes, organisations et variables]
 
 ## Documentation
 
