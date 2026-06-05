@@ -10,7 +10,6 @@ Utiliser deux ESP32-S3 en déployant un firmware identique en C et en MicroPytho
 - 📦 [Prérequis](#prérequis)
 - 🚀 [Installation](#installation)
 - 🛠️ [Utilisation](#utilisation)
-- 🤝 [Contribution](#contribution)
 - 📚 [Documentation](#documentation)
 
 ## Prérequis
