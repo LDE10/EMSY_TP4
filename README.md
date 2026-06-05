@@ -34,15 +34,6 @@ Unispace12x24 : Fichier de police de caractères pour l'affichage de texte, http
 
 ## Utilisation
 
-Utilisation Thony : https://github.com/LDE10/EMSY_TP4/blob/main/EMSY02%20TP4-Decouverte%20ESP32%20v1_0.pdf
-
-<img width="709" height="226" alt="image" src="https://github.com/user-attachments/assets/f35bbe60-e3f0-47ee-948a-255204bc4098" />
-page 3
-
-Utilisation en C :https://github.com/LDE10/EMSY_TP4/blob/main/EMSY02%20TP4-Decouverte%20ESP32%20v1_0.pdf
-
-<img width="531" height="130" alt="image" src="https://github.com/user-attachments/assets/8ed3fea9-cdc8-4072-9c79-2b1a38923f51" />
-page 3
 
 
 ## Contribution
@@ -78,6 +69,16 @@ De plus la LED RGB clignote à une fréquence de 2 Hz.
 [Liste de tout ce qui permet le déploiement du projet avec description + lien vers la documentation et mise en avant des comptes, organisations et variables]
 
 ## Documentation
+
+Utilisation Thony : https://github.com/LDE10/EMSY_TP4/blob/main/EMSY02%20TP4-Decouverte%20ESP32%20v1_0.pdf
+
+<img width="709" height="226" alt="image" src="https://github.com/user-attachments/assets/f35bbe60-e3f0-47ee-948a-255204bc4098" />
+page 3
+
+Utilisation en C :https://github.com/LDE10/EMSY_TP4/blob/main/EMSY02%20TP4-Decouverte%20ESP32%20v1_0.pdf
+
+<img width="531" height="130" alt="image" src="https://github.com/user-attachments/assets/8ed3fea9-cdc8-4072-9c79-2b1a38923f51" />
+page 3
 
 [Lien vers documentations externes ou documentation embarquée ici avec table des matières]
 
