@@ -36,18 +36,23 @@ Unispace12x24 : Fichier de police de caractères pour l'affichage de texte, http
 
 Code C :
 
+* Bouton S1 (GPIO 4) : Contrôle l'état de la LED standard D1 (GPIO 6). Une détection de front descendant couplée à un anti-rebond temporel de 50 ms permet d'inverser proprement l'état de la LED (allumée/éteinte) à chaque impulsion.
+* Bouton S2 (GPIO 5) : Gère le cycle de couleur de la LED RGB NeoPixel interne (GPIO 48). À chaque appui validé, une machine à états (énumération `RGB_COLORS`) incrémente la couleur selon le cycle classique : Rouge → Vert → Bleu → Rouge.
+* Périphérique RMT : L'affichage de la couleur sur la LED RGB utilise le périphérique matériel de modulation à distance (RMT) configuré à une fréquence de 10 MHz pour garantir des signaux de commande précis.
+
 Code MicroPython :
 
 Le système bascule automatiquement entre deux modes toutes les 2 secondes :
 
 1. Mode Local :
-   * Bouton S1 : Alterne l'état de la led D1 à chaque appui (détection de flanc + anti-rebond).
-   * Bouton S2 : Modifie la couleur de la led RGB (Rouge → Vert → Bleu).
+   * Bouton S1 (Pin 4) : Alterne l'état de la led D1 à chaque appui (détection de flanc + anti-rebond).
+   * Bouton S2 (Pin 5) : Modifie la couleur de la led RGB (Rouge → Vert → Bleu).
    * Écran LCD : Affiche en temps réel la couleur de la led RGB.
 
 2. Mode Remote :
    * Activé dès qu'un message b'pong' est reçu en réponse à un b'ping'. Si aucun signal n'est reçu pendant plus de 4 secondes, le système repasse en Mode Local.
-   * Bouton S2 : L'appui sur le bouton agit sur l'autre carte ESP32 pour modifier la couleur de la led RGB.
+   * Bouton S1 (Pin 4) : Même fonctionnalité.
+   * Bouton S2 (Pin 5) : L'appui sur le bouton agit sur l'autre carte ESP32 pour modifier la couleur de la led RGB.
    * LED RGB : En mode connecté, la LED RGB se met à clignoter à une fréquence de 2 Hz (250 ms).
    * Écran LCD : Affiche en temps réel la couleur de la led RG
 
