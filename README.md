@@ -26,6 +26,9 @@ APPLICATION :
 
 Utilisation Thony : 
 
+<img width="709" height="226" alt="image" src="https://github.com/user-attachments/assets/f35bbe60-e3f0-47ee-948a-255204bc4098" />
+
+
 LIBRAIRIE : 
 
 ili : https://github.com/rdagger/micropython-ili9341/blob/master/ili9341.py
