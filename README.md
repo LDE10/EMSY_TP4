@@ -39,6 +39,9 @@ Code C :
 <img width="436" height="230" alt="image" src="https://github.com/user-attachments/assets/8286d3cb-0c95-4907-8446-b14b90b85151" />
 
    * Bouton S2 (GPIO 5) : Gère le cycle de couleur de la LED RGB NeoPixel (GPIO 48), à chaque appui validé une machine à états (RGB_COLORS) incrémente la couleur selon le cycle (Rouge → Vert → Bleu)
+
+<img width="867" height="350" alt="image" src="https://github.com/user-attachments/assets/81c3d14b-bde2-464c-9805-0a00b4641ef2" />
+
    * Périphérique RMT : L'affichage de la couleur sur la LED RGB utilise le périphérique matériel de modulation à distance (RMT) configuré à une fréquence de 10 MHz pour garantir des signaux de commande précis.
 
 Code MicroPython :
