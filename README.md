@@ -58,7 +58,7 @@ Le système bascule automatiquement entre deux modes toutes les 2 secondes :
 
 [Code C](https://github.com/LDE10/EMSY_TP4/blob/main/Code/C/main.c)
 
-[Code MicroPython](https://github.com/LDE10/EMSY_TP4/tree/main/Code/MicroPython)
+[Code MicroPython](https://github.com/LDE10/EMSY_TP4/blob/main/Code/MicroPython/TP4_EMSY.py)
 
 ## Documentation
 
