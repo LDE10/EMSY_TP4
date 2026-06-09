@@ -66,7 +66,7 @@ Le système bascule automatiquement entre deux modes toutes les 2 secondes :
 
    * Bouton S2 (Pin 5) : L'appui sur le bouton agit sur l'autre carte ESP32 pour modifier la couleur de la led RGB.
 
-     <img width="247" height="147" alt="image" src="https://github.com/user-attachments/assets/39430d11-30ef-4a51-9f35-c53f2430ffe9" />
+<img width="357" height="197" alt="image" src="https://github.com/user-attachments/assets/5170f804-de97-4baa-b4d9-a5eb03937725" />
 
    * LED RGB : En mode connecté, la LED RGB se met à clignoter à une fréquence de 2 Hz (250 ms).
    * Écran LCD : Affiche en temps réel la couleur de la led RG
