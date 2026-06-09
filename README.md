@@ -24,7 +24,7 @@ LIBRAIRIE : ili.py, xglcd_font.py et Unispace12x24.c
 
 LIBRAIRIE : 
 
-ili9341.py : [Driver pour la gestion de l'affichage de l'écran LCD](https://github.com/rdagger/micropython-ili9341/blob/master/ili9341.py)
+ili9341.py : [Driver la gestion de l'affichage de l'écran LCD](https://github.com/rdagger/micropython-ili9341/blob/master/ili9341.py)
 
 xglcd_font : [Gestionnaire de polices graphique](https://github.com/rdagger/micropython-ili9341/blob/master/xglcd_font.py)
 
