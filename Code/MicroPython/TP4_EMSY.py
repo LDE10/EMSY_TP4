@@ -86,7 +86,7 @@ while True :
     
 
 # 1. ENVOI AUTOMATIQUE TOUTES LES 2 SECONDES
-    if time.ticks_diff(maintenant, chrono_envoi) >= 2000: # Toutes les 2 s 
+    if time.ticks_diff(maintenant, chrono_envoi) >= 2000: # Toutes les 2s 
         try:
             e.send(peer, b'ping') # Envoie un "ping" 
         except OSError:
@@ -104,7 +104,7 @@ while True :
         except OSError:
                 pass
             
-    # Valide le mode Remote
+    # Validation du mode Remote
     if msg == b'pong':
         dernier_contact = maintenant # Temps depuis la derniere communication
         if not remote_mode:
@@ -120,7 +120,7 @@ while True :
 
 
 # 3. VÉRIFICATION DU TEMPS DE SORTIE
-    # Si pas de communication depuis plus 4 secondes -> Mode Local
+    # Si pas de communication depuis plus 4 secondes -> mode Local
     if time.ticks_diff(maintenant, dernier_contact) > 4000:
         if remote_mode: 
             print("Mode Local.")
@@ -182,5 +182,4 @@ while True :
         elif Couleurs == Couleur_Texte[2]:
             display.draw_text(20, 100, "Bleu", font, BLEU, NOIR)
         
-#        display.draw_text(20, 100, "couleur", font, Couleurs, NOIR)
         old_index = index
