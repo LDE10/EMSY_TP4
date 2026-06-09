@@ -35,6 +35,9 @@ Unispace12x24 : [Fichier de police de caractères pour l'affichage de texte](htt
 Code C :
 
    * Bouton S1 (GPIO 4) : Contrôle l'état de la led D1 (GPIO 6), une détection de flanc descendant couplée à un anti-rebond temporel de 50 ms permet d'inverser l'état de la LED à chaque impulsion.
+
+<img width="436" height="230" alt="image" src="https://github.com/user-attachments/assets/8286d3cb-0c95-4907-8446-b14b90b85151" />
+
    * Bouton S2 (GPIO 5) : Gère le cycle de couleur de la LED RGB NeoPixel (GPIO 48), à chaque appui validé une machine à états (RGB_COLORS) incrémente la couleur selon le cycle (Rouge → Vert → Bleu)
    * Périphérique RMT : L'affichage de la couleur sur la LED RGB utilise le périphérique matériel de modulation à distance (RMT) configuré à une fréquence de 10 MHz pour garantir des signaux de commande précis.
 
