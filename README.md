@@ -44,6 +44,10 @@ Le système bascule automatiquement entre deux modes toutes les 2 secondes :
 
 1. Mode Local :
    * Bouton S1 (Pin 4) : Alterne l'état de la led D1 (Pin 6) à chaque appui (détection de flanc + anti-rebond).
+
+  <img width="317" height="152" alt="image" src="https://github.com/user-attachments/assets/242e1842-dfd6-47f9-9b45-1e69d9fa0d2d" />
+
+
    * Bouton S2 (Pin 5) : Modifie la couleur de la led RGB (Rouge → Vert → Bleu).
    * Écran LCD : Affiche en temps réel la couleur de la led RGB.
 
