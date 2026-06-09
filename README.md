@@ -60,9 +60,12 @@ Le système bascule automatiquement entre deux modes toutes les 2 secondes :
 
 2. Mode Remote :
    * Activé dès qu'un message b'pong' est reçu en réponse à un b'ping'. Si aucun signal n'est reçu pendant plus de 4 secondes, le système repasse en Mode Local.
-   * Bouton S1 (Pin 4) : Même fonctionnalité.
 
 <img width="645" height="631" alt="image" src="https://github.com/user-attachments/assets/1c79fdf9-7372-4e3c-9df6-803ea75c836a" />
+
+   * Bouton S1 (Pin 4) : Même fonctionnalité.
+
+  <img width="317" height="152" alt="image" src="https://github.com/user-attachments/assets/242e1842-dfd6-47f9-9b45-1e69d9fa0d2d" />
 
    * Bouton S2 (Pin 5) : L'appui sur le bouton agit sur l'autre carte ESP32 pour modifier la couleur de la led RGB.
 
