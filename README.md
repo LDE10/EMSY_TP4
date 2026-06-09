@@ -78,7 +78,12 @@ Vérification de la connexion :
 <img width="357" height="197" alt="image" src="https://github.com/user-attachments/assets/5170f804-de97-4baa-b4d9-a5eb03937725" />
 
    * LED RGB : En mode connecté, la LED RGB se met à clignoter à une fréquence de 2 Hz (250 ms).
+
+<img width="842" height="227" alt="image" src="https://github.com/user-attachments/assets/72e56600-894d-46f3-b90b-926653b089fb" />
+
    * Écran LCD : Affiche en temps réel la couleur de la led RG
+   * 
+<img width="641" height="397" alt="image" src="https://github.com/user-attachments/assets/d97a15ce-0faa-4f43-8aef-997d86b48c2d" />
 
 ### Langages & Frameworks
 
