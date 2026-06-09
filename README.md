@@ -49,7 +49,13 @@ Le système bascule automatiquement entre deux modes toutes les 2 secondes :
 
 
    * Bouton S2 (Pin 5) : Modifie la couleur de la led RGB (Rouge → Vert → Bleu).
+
+
+     
    * Écran LCD : Affiche en temps réel la couleur de la led RGB.
+
+<img width="641" height="397" alt="image" src="https://github.com/user-attachments/assets/d97a15ce-0faa-4f43-8aef-997d86b48c2d" />
+
 
 2. Mode Remote :
    * Activé dès qu'un message b'pong' est reçu en réponse à un b'ping'. Si aucun signal n'est reçu pendant plus de 4 secondes, le système repasse en Mode Local.
