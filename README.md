@@ -63,6 +63,9 @@ Le système bascule automatiquement entre deux modes toutes les 2 secondes :
    * Activé dès qu'un message b'pong' est reçu en réponse à un b'ping'. Si aucun signal n'est reçu pendant plus de 4 secondes, le système repasse en Mode Local.
 
 <img width="645" height="631" alt="image" src="https://github.com/user-attachments/assets/1c79fdf9-7372-4e3c-9df6-803ea75c836a" />
+
+Vérification de la connexion :
+
 <img width="465" height="176" alt="image" src="https://github.com/user-attachments/assets/ba492d8f-7caf-4c2a-a586-ec6f6bec867a" />
 
    * Bouton S1 (Pin 4) : Même fonctionnalité.
