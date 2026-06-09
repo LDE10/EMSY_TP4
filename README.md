@@ -50,6 +50,7 @@ Le système bascule automatiquement entre deux modes toutes les 2 secondes :
 
    * Bouton S2 (Pin 5) : Modifie la couleur de la led RGB (Rouge → Vert → Bleu).
 
+<img width="247" height="147" alt="image" src="https://github.com/user-attachments/assets/39430d11-30ef-4a51-9f35-c53f2430ffe9" />
 
      
    * Écran LCD : Affiche en temps réel la couleur de la led RGB.
